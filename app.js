@@ -11,26 +11,23 @@ function drawSongs(songList) {
   for (var i = 0; i < 50; i++) {
     var currentSong = songList[i];
     var ul = document.getElementById("search-results");
-    
-    ul.innerHTML = "<div class='row' id='display-result'> </div>";
-      
-    var div = document.getElementById("display-results");
-    
     var li = document.createElement("LI");
     
-    li.innerHtml = 
+    li.className = "row";
+    
+    li.innerHTML = 
       // img col
       "<span class='col-xs-1' id='album-art'>" +
-      "<img href='" + currentSong.albumArt + "'> " +
+      "<img src='" + currentSong.albumArt + "' width='50'> " +
       "</span>" +
       // title row
       "<div class='col-xs-8'>" +
       "<div class='row'>" +
-      "<div class='col-xs-3'>" +
-      "<a class='glyphicon glyphicon-play-circle' href='" + currentSong.preview + "'>" + 
+      "<div class='col-xs-1'>" +
+      "<a class='glyphicon glyphicon-play-circle' href='" + currentSong.preview + "'> </a>" + 
       "</div>" +
-      "<div class='col-xs-9'>" +
-      "<p id='title'>" + currentSong.title + "</p>" +
+      "<div class='col-xs-9 text-left' id='title'>" +
+      currentSong.title +
       "</div>" +
       "</div>" /*end title row*/ + 
       // album row
@@ -51,6 +48,6 @@ function drawSongs(songList) {
       "<p id='price'> Price: $" + currentSong.price + "</p>" +
       "</div>";
 
-    return div.appendChild(li);
+    ul.appendChild(li);
   }
 }
