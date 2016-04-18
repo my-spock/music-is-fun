@@ -1,16 +1,7 @@
-body {
+#search-results {
+    list-style: none;
     
-    .container {
-        
-        #search-results {
-            list-style: unstyled;
-            
-            #title {
-                padding-left: -30px;
-            }
-            
-        }
-        
+    li {
+        margin: 10 0;
     }
-    
 }

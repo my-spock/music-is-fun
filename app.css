@@ -1,2 +1,6 @@
+#search-results {
+  list-style: none; }
+  #search-results li {
+    margin: 10 0; }
 
 /*# sourceMappingURL=app.css.map */
